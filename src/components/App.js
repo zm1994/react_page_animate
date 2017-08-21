@@ -18,11 +18,10 @@ class App extends React.Component {
         <Link to="/about">About</Link>
         <br/>
         <CSSTransitionGroup
-          transitionName="example"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}
+          transitionName="page"
+          transitionEnterTimeout={1000}
+          transitionLeaveTimeout={500}
         >
-          {/*{ this.props.children }*/}
           {React.cloneElement(this.props.children, { key: this.props.location.pathname })}
         </CSSTransitionGroup>
       </div>
